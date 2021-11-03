@@ -2,7 +2,6 @@ package cl.usm.ejercicio;
 
 public class BilleteraCryptoBank {
 	private int codBilletera;
-	private ClienteCryptoBank cliente;
 	private double saldoBilletera;
 	private MonedaCryptoBank moneda;
 	
@@ -12,14 +11,6 @@ public class BilleteraCryptoBank {
 	
 	public void setCodBilletera(int codBilletera) {
 		this.codBilletera = codBilletera;
-	}
-	
-	public ClienteCryptoBank getCliente() {
-		return cliente;
-	}
-	
-	public void setCliente(ClienteCryptoBank cliente) {
-		this.cliente = cliente;
 	}
 	
 	public double getSaldoBilletera() {
@@ -38,17 +29,16 @@ public class BilleteraCryptoBank {
 		this.moneda = moneda;
 	}
 	
-	public BilleteraCryptoBank(int codBilletera, ClienteCryptoBank cliente, double saldoBilletera, MonedaCryptoBank moneda) {
+	public BilleteraCryptoBank(int codBilletera, double saldoBilletera, MonedaCryptoBank moneda) {
 		this.codBilletera = codBilletera;
-		this.cliente = cliente;
 		this.saldoBilletera = saldoBilletera;
 		this.moneda = moneda;
 	}
 	
-	public void obtenerBilleteraCryptoBank(int codBilletera) {
+	public void obtenerBilleteraCryptoBank() {
 		System.out.println("Billetera: " + getCodBilletera());
-		System.out.println("Cliente: " + getCliente().getRutCliente());
 		System.out.println("Saldo: " + getSaldoBilletera());
 		System.out.println("Moneda: " + getMoneda().getTipoMoneda());
+		this.moneda.obtenerMonedaCryptoBank();
 	}
 }

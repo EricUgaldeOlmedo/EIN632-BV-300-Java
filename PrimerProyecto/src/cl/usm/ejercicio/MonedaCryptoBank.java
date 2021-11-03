@@ -1,11 +1,11 @@
 package cl.usm.ejercicio;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class MonedaCryptoBank {
 	private int codMoneda;
 	private String tipoMoneda;
-	private Date fechaCreacionMoneda;
+	private LocalDate fechaCreacionMoneda;
 	
 	public int getCodMoneda() {
 		return codMoneda;
@@ -19,20 +19,20 @@ public class MonedaCryptoBank {
 	public void setTipoMoneda(String tipoMoneda) {
 		this.tipoMoneda = tipoMoneda;
 	}
-	public Date getFechaCreacionMoneda() {
+	public LocalDate getFechaCreacionMoneda() {
 		return fechaCreacionMoneda;
 	}
-	public void setFechaCreacionMoneda(Date fechaCreacionMoneda) {
+	public void setFechaCreacionMoneda(LocalDate fechaCreacionMoneda) {
 		this.fechaCreacionMoneda = fechaCreacionMoneda;
 	}
 	
-	public MonedaCryptoBank(int codMoneda, String tipoMoneda, Date fechaCreacionMoneda) {
+	public MonedaCryptoBank(int codMoneda, String tipoMoneda, LocalDate fechaCreacionMoneda) {
 		this.codMoneda = codMoneda;
 		this.tipoMoneda = tipoMoneda;
 		this.fechaCreacionMoneda = fechaCreacionMoneda;
 	}
 	
-	public void obtenerMonedaCryptoBank (int codMoneda) {
+	public void obtenerMonedaCryptoBank() {
 		System.out.println("Moneda: " + getCodMoneda());
 		System.out.println("Tipo: " + getTipoMoneda());
 		System.out.println("Fecha de Creación: " + getFechaCreacionMoneda());
